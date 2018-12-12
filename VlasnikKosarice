@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace KosaricaZakupovinu2
+{
+    class Vlasnik
+    {
+        private string id, adresa, naziv;
+
+        public Vlasnik(string id, string adresa, string naziv)
+        {
+            this.id = id;
+            this.adresa = adresa;
+            this.naziv = naziv;
+        }
+
+        public void PromjeniAdresu(string novaAdresa)
+        {
+            adresa = novaAdresa;
+        }
+
+        public Vlasnik()
+        {
+            id = "";
+            adresa = "";
+            naziv = "";
+        }
+
+        public string VratiID()
+        {
+            return id;
+        }
+
+        public string VratiNaziv()
+        {
+            return naziv;
+        }
+
+        public string VratiAdresu()
+        {
+            return adresa;
+        }
+
+        public void PromjeniNaziv(string _naziv)
+        {
+            naziv = _naziv;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("{0} / {1} / {2}", id, naziv, adresa);
+        }
+    }
+}
